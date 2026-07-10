@@ -1,0 +1,153 @@
+/* Pura Navbar Layout */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Yeh line logo ko left par aur links ko extreme right par phenk degi */
+    align-items: center;        /* Logo aur links ko vertically upar-neeche se center karne ke liye */
+    background-color: #333;     /* Dark Grey / Blackish background */
+    padding: 15px 30px;
+}
+
+/* Logo ka Style */
+.navbar .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Links ki List ko set karna */
+.nav-links {
+    display: flex;              /* List ke items ko bhi ek line me karne ke liye */
+    gap: 20px;                  /* Links ke darmiyan faasla */
+    list-style: none;           /* Bullet points (dots) hatane ke liye */
+}
+
+/* Asli Links (Text) ka Style */
+.nav-links a {
+    color: white;
+    text-decoration: none;      /* Links ke neeche se underline hatane ke liye */
+    font-size: 16px;
+}
+
+/* Link par Hover Effect */
+.nav-links a:hover {
+    color: #007bff;             /* Mouse upar aane par blue color ho jaye */
+}
+
+
+/* Jab body par .dark-theme class lagegi, to yeh colors chalenge */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Dark mode me card ka background bhi dark karne ke liye */
+body.dark-theme .profile-card {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .skills-list li {
+    background-color: #333;
+    color: #fff;
+}
+/*...search    ..*/
+
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+#search-input {
+    padding: 10px 15px;
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+}
+#search-input:focus {
+    border-color: #007bff; /* Click karne par blue border */
+}
+/*  Search Button  */
+#search-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+#search-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Sirf us dabbe ko target karne ke liye jiska naam profile-card hai */
+/* Bare dabbe ko target kar rahe hain */
+.container {
+    display: flex;             /* Is ek line se saare cards ek line me aamne-saamne aa jayenge */
+    justify-content: center;    /* Saare cards ko screen ke center me karne ke liye */
+    gap: 20px;                 /* Cards ke darmiyan barabar 20px ka faasla dene ke liye */
+    flex-wrap: wrap;           /* Agar screen choti ho to cards khud-ba-khud neeche wali line me aa jayein */
+    padding: 50px;
+}
+
+.profile-card {
+    background-color: white;
+   /* width: 300px;               /* Dabbe ki chauwrai fix karne ke liye */
+   /* margin: 50px auto;          /* Card ko screen ke bilkul center me lane ke liye */
+    flex: 1;                      /* Yeh jadoo ki line hai! */
+   padding: 30px;              /* Andar se space dene ke liye */
+    border-radius: 15px;        /* Corners ko round karne ke liye */
+    box-shadow: 0px 8px 12px rgba(77, 43, 199, 0.678); /* Card ke neeche halki si shadow (saya) dene ke liye */
+}
+.ali-card {
+    flex: 3; /* Baqi sab card 1 par hain, isko humne 2 kar diya */
+    background-color: #e6f2ff; /* Takay yeh card alag se rang me pehchana jaye */
+}
+/* Card ke andar ki image ko gol (round) karne ke liye */
+.profile-card img {
+    border-radius: 50px;       /* 50% karne se square image bilkul gol circle ban jati hai */
+    width: 100px;
+    height: 100px;
+}
+
+.skills-list {
+    list-style: none; /* Dots hatane ke liye */
+    padding: 0;
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.skills-list li {
+    background-color: #582d2d;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #e2d9d9;
+}
+
+.main-footer {
+    display: flex;
+    justify-content: space-between; /* Copyright text left par aur privacy links right par! */
+    align-items: center;
+    background-color: #222;         /* Navbar se thoda sa mazeed dark color */
+    color: #aaa;                    /* Text ka rang thoda greyish white */
+    padding: 20px 30px;
+    margin-top: 40px;               /* Cards wale dabbe se thoda door rakhne ke liye */
+}
+
+/* Footer ke andar wale links ka style */
+.footer-links a {
+    color: #d6b9b9;
+    text-decoration: none;
+    margin-left: 15px;              /* Links ke aapas me thoda faasla */
+}
+
+.footer-links a:hover {
+    color: white;                   /* Hover karne par text bilkul safaid ho jaye */
+}
